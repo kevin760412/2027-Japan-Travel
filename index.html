@@ -6,376 +6,313 @@
     <title>2027 名古屋 ＋ 東京 10 天 9 夜自由行</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        nature: {
-                            50: '#f2f7f4',
-                            100: '#d9e8de',
-                            500: '#3b7a57',
-                            600: '#2e6144',
-                            700: '#234a34',
-                            800: '#1b3827',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
         body {
             font-family: 'Noto Sans TC', sans-serif;
-            background-color: #f8faf8;
+            background-color: #f7f9f6;
             color: #2c3e35;
         }
-        /* 自訂時間軸線條 */
+        /* 淡土色系（日期與標籤背景） */
+        .bg-earth-tag {
+            background-color: #eef2ec;
+            color: #5c5346;
+            border-left: 4px solid #b5a48b;
+        }
+        /* 淡綠色底色（電車建議與金額區塊） */
+        .bg-train-box {
+            background-color: #eef4f0;
+            border-left: 4px solid #4a7c59;
+        }
+        /* 時間線垂直線條 */
         .timeline-line::before {
             content: '';
             position: absolute;
             top: 0;
             bottom: 0;
-            left: 19px;
+            left: 15px;
             width: 2px;
-            background-color: #d9e8de;
+            background-color: #d1dcce;
         }
     </style>
 </head>
-<body class="bg-[#f4f7f5] min-h-screen">
+<body class="min-h-screen pb-12">
 
     <!-- 頂部 Header -->
-    <header class="bg-nature-700 text-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-4xl mx-auto px-4 py-5 flex flex-col sm:flex-row justify-between items-center">
-            <div class="flex items-center space-x-3 mb-2 sm:mb-0">
-                <i class="fa-solid fa-plane-departure text-2xl text-nature-100"></i>
-                <h1 class="text-xl sm:text-2xl font-bold tracking-wide">2027 名古屋 ＋ 東京 10 天 9 夜</h1>
+    <header class="bg-[#3a5a40] text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-3xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-train text-xl text-[#a3b18a]"></i>
+                <h1 class="text-lg sm:text-xl font-bold tracking-wide">2027 名古屋 ＋ 東京 10 天 9 夜</h1>
             </div>
-            <div class="text-xs sm:text-sm bg-nature-800 px-3 py-1.5 rounded-full text-nature-100 font-medium shadow-inner">
-                <i class="fa-regular fa-calendar-days mr-1.5"></i> 2027/7/6 (一) ～ 7/15 (三)
+            <div class="text-xs sm:text-sm bg-[#588157] px-3 py-1 rounded-full text-white font-medium">
+                2027/7/6 ~ 7/15
             </div>
         </div>
     </header>
 
     <!-- 主要內容區 -->
-    <main class="max-w-4xl mx-auto px-4 py-8 space-y-8">
+    <main class="max-w-3xl mx-auto px-4 py-6 space-y-6">
 
-        <!-- 核心交通簡介卡片 -->
-        <section class="bg-white rounded-2xl shadow-md p-6 border-t-4 border-nature-600">
-            <h2 class="text-lg font-bold text-nature-800 mb-4 flex items-center">
-                <i class="fa-solid fa-train-subway mr-2 text-nature-600"></i> 核心交通指南
+        <!-- 核心交通簡介 -->
+        <section class="bg-white rounded-xl shadow-sm p-5 border border-gray-100">
+            <h2 class="text-base font-bold text-[#3a5a40] mb-3 flex items-center">
+                <i class="fa-solid fa-circle-info mr-2"></i> 核心交通簡介
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
-                <div class="bg-nature-50 p-4 rounded-xl border border-nature-100">
-                    <span class="font-bold text-nature-700 block mb-1">1. 名古屋 ➔ 東京</span>
-                    搭乘東海道新幹線「希望號（Nozomi）」，從名古屋站直達東京站只需約 1 小時 40 分鐘，免轉車。
-                </div>
-                <div class="bg-nature-50 p-4 rounded-xl border border-nature-100">
-                    <span class="font-bold text-nature-700 block mb-1">2. 東京 ➔ 箱根</span>
-                    可從上野搭車至品川轉新幹線到小田原，或到新宿搭乘小田急電鐵「浪漫特快（Romancecar）」直達箱根湯本（約 75-80 分鐘）。
-                </div>
+            <div class="space-y-2 text-sm text-gray-700">
+                <p>• <strong>名古屋 ➔ 東京</strong>：搭乘東海道新幹線「希望號（Nozomi）」，名古屋直達東京約 1 小時 40 分鐘，免轉車。</p>
+                <p>• <strong>東京 ➔ 箱根</strong>：可從新宿搭乘小田急電鐵「浪漫特快（Romancecar）」直達箱根湯本（約 75-80 分鐘）。</p>
             </div>
         </section>
 
-        <!-- 行程時間軸清單 -->
+        <!-- 每日行程清單 -->
         <div class="space-y-6">
 
             <!-- Day 1 -->
-            <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
-                    <div class="flex items-center space-x-3">
-                        <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded-lg text-sm">Day 1</span>
-                        <h3 class="text-lg font-bold text-gray-800">7/6 (一) 桃園機場 ✈️ 名古屋 ➔ 市區</h3>
-                    </div>
+            <div class="bg-white rounded-xl shadow-sm p-5 border border-gray-100">
+                <!-- 節點與日期 (淡土色標籤) -->
+                <div class="bg-earth-tag px-4 py-2.5 rounded-lg mb-4 font-bold text-sm">
+                    Day 1 (7/6)：桃園機場 ✈️ 名古屋中部國際機場 ➔ 名古屋市區
                 </div>
-                <div class="relative pl-6 space-y-6 timeline-line">
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">上午 / 下午</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            搭乘中華航空班機飛往名古屋。抵達中部國際機場後，搭乘名鐵特快（μ-SKY）約 28 分鐘直達「名古屋站」。
-                            <a href="https://maps.google.com/?q=Central+Japan+International+Airport" target="_blank" class="inline-flex items-center text-xs text-nature-600 font-medium ml-2 hover:underline"><i class="fa-solid fa-map-location-dot mr-1"></i>地圖</a>
-                        </div>
+                <div class="relative pl-6 space-y-4 timeline-line text-sm text-gray-700">
+                    <div class="relative pl-4">
+                        <div class="absolute left-[-17px] top-1.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-medium text-gray-900">什麼站到什麼站</div>
+                        <div class="text-xs text-gray-500">桃園機場 ➔ 中部國際機場 ➔ 名古屋站</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">晚上</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            入住名古屋飯店。晚餐推薦：世界的山ちゃん（夢幻雞翅）或味噌豬排（矢場豬排）。
-                            <a href="https://maps.google.com/?q=Nagoya+Station" target="_blank" class="inline-flex items-center text-xs text-nature-600 font-medium ml-2 hover:underline"><i class="fa-solid fa-map-location-dot mr-1"></i>地圖</a>
-                        </div>
+                    <!-- 電車建議與金額 (淡綠色底色) -->
+                    <div class="bg-train-box p-3.5 rounded-lg text-xs sm:text-sm space-y-1">
+                        <div class="font-bold text-[#3a5a40]"><i class="fa-solid fa-train-subway mr-1"></i> 建議交通與金額</div>
+                        <div>搭乘名鐵特快（μ-SKY）直達名古屋站（車程約 28 分鐘）。車資：約 1,230 日圓 + 特別車輛券（μ票）360 日圓。</div>
+                    </div>
+                    <div class="relative pl-4 pt-1">
+                        <div class="absolute left-[-17px] top-2.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-bold text-gray-800 mb-1">詳細內容解說</div>
+                        <p class="text-gray-600 mb-2">抵達後前往飯店辦理入住。晚餐推薦品嚐名古屋名物：世界的山ちゃん（夢幻雞翅）或味噌豬排。</p>
+                        <a href="https://maps.google.com/?q=Nagoya+Station" target="_blank" class="inline-flex items-center text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-map-location-dot mr-1.5 text-[#3a5a40]"></i> 地圖：名古屋站</a>
                     </div>
                 </div>
             </div>
 
             <!-- Day 2 -->
-            <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
-                    <div class="flex items-center space-x-3">
-                        <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded-lg text-sm">Day 2</span>
-                        <h3 class="text-lg font-bold text-gray-800">7/7 (二) 名古屋深度一日遊</h3>
-                    </div>
+            <div class="bg-white rounded-xl shadow-sm p-5 border border-gray-100">
+                <div class="bg-earth-tag px-4 py-2.5 rounded-lg mb-4 font-bold text-sm">
+                    Day 2 (7/7)：名古屋深度一日遊
                 </div>
-                <div class="relative pl-6 space-y-6 timeline-line">
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">白天的景點</div>
-                        <div class="flex-1 text-sm text-gray-700 space-y-2">
-                            <p>• <strong>名古屋城</strong>：欣賞金鯱與歷史建築。 <a href="https://maps.google.com/?q=Nagoya+Castle" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></p>
-                            <p>• <strong>熱田神宮</strong>：日本三大神宮之一，環境清幽古老。 <a href="https://maps.google.com/?q=Atsuta+Jingu" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></p>
-                            <p>• <strong>OASIS 21 與名古屋電視塔</strong>：地標「水的宇宙船」，夜景迷人。 <a href="https://maps.google.com/?q=Oasis+21+Nagoya" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></p>
-                        </div>
+                <div class="relative pl-6 space-y-4 timeline-line text-sm text-gray-700">
+                    <div class="relative pl-4">
+                        <div class="absolute left-[-17px] top-1.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-medium text-gray-900">什麼站到什麼站</div>
+                        <div class="text-xs text-gray-500">名古屋市營地下鐵沿線巡禮（名古屋城、熱田神宮、榮商圈）</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">晚餐推薦</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            蓬萊軒（Hitsumabushi）品嚐道地的名古屋鰻魚飯三吃。
+                    <div class="bg-train-box p-3.5 rounded-lg text-xs sm:text-sm space-y-1">
+                        <div class="font-bold text-[#3a5a40]"><i class="fa-solid fa-train-subway mr-1"></i> 建議交通與金額</div>
+                        <div>推薦購買「地下鐵全線一日券」（成人 870 日圓），當日無限次搭乘地下鐵各線。</div>
+                    </div>
+                    <div class="relative pl-4 pt-1">
+                        <div class="absolute left-[-17px] top-2.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-bold text-gray-800 mb-1">詳細內容解說</div>
+                        <p class="text-gray-600 mb-2">上午參訪名古屋城與日本三大神宮之一的熱田神宮；傍晚至 OASIS 21（綠洲 21）欣賞水的宇宙船夜景。晚餐品嚐道地的蓬萊軒鰻魚飯三吃。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://maps.google.com/?q=Nagoya+Castle" target="_blank" class="inline-flex items-center text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-map-location-dot mr-1.5 text-[#3a5a40]"></i> 名古屋城地圖</a>
+                            <a href="https://maps.google.com/?q=Atsuta+Jingu" target="_blank" class="inline-flex items-center text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-map-location-dot mr-1.5 text-[#3a5a40]"></i> 熱田神宮地圖</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Day 3 -->
-            <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
-                    <div class="flex items-center space-x-3">
-                        <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded-lg text-sm">Day 3</span>
-                        <h3 class="text-lg font-bold text-gray-800">7/8 (三) 名古屋文青與購物一日遊</h3>
-                    </div>
+            <div class="bg-white rounded-xl shadow-sm p-5 border border-gray-100">
+                <div class="bg-earth-tag px-4 py-2.5 rounded-lg mb-4 font-bold text-sm">
+                    Day 3 (7/8)：名古屋文青與購物一日遊
                 </div>
-                <div class="relative pl-6 space-y-6 timeline-line">
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">全天行程</div>
-                        <div class="flex-1 text-sm text-gray-700 space-y-2">
-                            <p>• <strong>大須商店街</strong>：古著、動漫與美食街。 <a href="https://maps.google.com/?q=Osu+Shopping+Street+Nagoya" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></p>
-                            <p>• <strong>榮商圈 (Sakae)</strong>：三越、松坂屋、Parco 百貨林立，血拼好去處。 <a href="https://maps.google.com/?q=Sakae+Nagoya" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></p>
-                        </div>
+                <div class="relative pl-6 space-y-4 timeline-line text-sm text-gray-700">
+                    <div class="relative pl-4">
+                        <div class="absolute left-[-17px] top-1.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-medium text-gray-900">什麼站到什麼站</div>
+                        <div class="text-xs text-gray-500">大須觀音站 ➔ 榮站</div>
+                    </div>
+                    <div class="bg-train-box p-3.5 rounded-lg text-xs sm:text-sm space-y-1">
+                        <div class="font-bold text-[#3a5a40]"><i class="fa-solid fa-train-subway mr-1"></i> 建議交通與金額</div>
+                        <div>使用地下鐵移動，單程車資約 210 日圓（或繼續使用一日券）。</div>
+                    </div>
+                    <div class="relative pl-4 pt-1">
+                        <div class="absolute left-[-17px] top-2.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-bold text-gray-800 mb-1">詳細內容解說</div>
+                        <p class="text-gray-600 mb-2">白天造訪充滿古著、動漫與在地小吃的大須商店街；下午至榮商圈逛三越、松坂屋與 Parco 百貨血拼。</p>
+                        <a href="https://maps.google.com/?q=Osu+Shopping+Street+Nagoya" target="_blank" class="inline-flex items-center text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-map-location-dot mr-1.5 text-[#3a5a40]"></i> 大須商店街地圖</a>
                     </div>
                 </div>
             </div>
 
             <!-- Day 4 -->
-            <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
-                    <div class="flex items-center space-x-3">
-                        <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded-lg text-sm">Day 4</span>
-                        <h3 class="text-lg font-bold text-gray-800">7/9 (四) 長島 Outlet ＋ 名花之里燈光秀</h3>
-                    </div>
+            <div class="bg-white rounded-xl shadow-sm p-5 border border-gray-100">
+                <div class="bg-earth-tag px-4 py-2.5 rounded-lg mb-4 font-bold text-sm">
+                    Day 4 (7/9)：【方案 B】長島 Outlet ＋ 名花之里燈光秀
                 </div>
-                <div class="relative pl-6 space-y-6 timeline-line">
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">交通方式</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            前往名古屋車站旁「名鐵巴士中心」4樓22號乘車處，搭乘直達高速巴士（單程約 50 分鐘）。
-                        </div>
+                <div class="relative pl-6 space-y-4 timeline-line text-sm text-gray-700">
+                    <div class="relative pl-4">
+                        <div class="absolute left-[-17px] top-1.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-medium text-gray-900">什麼站到什麼站</div>
+                        <div class="text-xs text-gray-500">名鐵巴士中心 ➔ 三井 Outlet ➔ 名花之里 ➔ 名古屋車站</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">上午～下午</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            三井 Outlet Park 爵士之夢長島（全日本規模最大、約300家店舖）。 <a href="https://maps.google.com/?q=Jazz+Dream+Nagashima" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a>
-                        </div>
+                    <div class="bg-train-box p-3.5 rounded-lg text-xs sm:text-sm space-y-1">
+                        <div class="font-bold text-[#3a5a40]"><i class="fa-solid fa-train-subway mr-1"></i> 建議交通與金額</div>
+                        <div>於名古屋車站旁「名鐵巴士中心」4樓搭乘直達高速巴士（單程約 50 分鐘，來回車資與套票依現場為準）。</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">傍晚～晚上</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            搭乘接駁車前往「名花之里（なばなの里）」，欣賞日本最大規模夜間燈光秀，後返回名古屋。 <a href="https://maps.google.com/?q=Nabana+no+Sato" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a>
-                        </div>
+                    <div class="relative pl-4 pt-1">
+                        <div class="absolute left-[-17px] top-2.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-bold text-gray-800 mb-1">詳細內容解說</div>
+                        <p class="text-gray-600 mb-2">上午至下午於全日本規模最大、擁有約 300 家店舖的「三井 Outlet Park 爵士之夢長島」盡情血拼；傍晚搭乘接駁車前往「名花之里」欣賞大型夜間燈光秀。</p>
+                        <a href="https://maps.google.com/?q=Jazz+Dream+Nagashima" target="_blank" class="inline-flex items-center text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-map-location-dot mr-1.5 text-[#3a5a40]"></i> 長島 Outlet 地圖</a>
                     </div>
                 </div>
             </div>
 
             <!-- Day 5 -->
-            <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
-                    <div class="flex items-center space-x-3">
-                        <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded-lg text-sm">Day 5</span>
-                        <h3 class="text-lg font-bold text-gray-800">7/10 (五) 名古屋 ➔ 新幹線 ➔ 東京上野</h3>
-                    </div>
+            <div class="bg-white rounded-xl shadow-sm p-5 border border-gray-100">
+                <div class="bg-earth-tag px-4 py-2.5 rounded-lg mb-4 font-bold text-sm">
+                    Day 5 (7/10)：名古屋 ➔ 新幹線 ➔ 東京上野
                 </div>
-                <div class="relative pl-6 space-y-6 timeline-line">
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">上午</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            名古屋悠閒享用特色早餐（如 Komeda's Coffee 點咖啡送烤吐司），退房前往名古屋站。
-                        </div>
+                <div class="relative pl-6 space-y-4 timeline-line text-sm text-gray-700">
+                    <div class="relative pl-4">
+                        <div class="absolute left-[-17px] top-1.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-medium text-gray-900">什麼站到什麼站</div>
+                        <div class="text-xs text-gray-500">名古屋站 ➔ 東京站 ➔ 上野站（轉乘 JR 山手線）</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">中午 12:00</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            搭乘 Nozomi（希望號）新幹線，約 13:40 抵達東京站，轉乘 JR 山手線至上野飯店寄放行李。
-                        </div>
+                    <div class="bg-train-box p-3.5 rounded-lg text-xs sm:text-sm space-y-1">
+                        <div class="font-bold text-[#3a5a40]"><i class="fa-solid fa-train-subway mr-1"></i> 建議交通與金額</div>
+                        <div>搭乘東海道新幹線「希望號（Nozomi）」自由席/指定席約 1 小時 40 分鐘。票價約 10,500 - 11,300 日圓。</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">下午 / 晚上</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            上野阿美橫丁（Ameyoko）藥妝購物、品嚐平價小吃與敘敘苑燒肉晚餐。 <a href="https://maps.google.com/?q=Ameyoko+Ueno" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a>
-                        </div>
+                    <div class="relative pl-4 pt-1">
+                        <div class="absolute left-[-17px] top-2.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-bold text-gray-800 mb-1">詳細內容解說</div>
+                        <p class="text-gray-600 mb-2">上午在名古屋享用特色早餐後退房。搭乘 12:00 左右新幹線前往東京，轉車至上野飯店寄放行李。晚上逛上野阿美橫丁並享用敘敘苑燒肉晚餐。</p>
+                        <a href="https://maps.google.com/?q=Ameyoko+Ueno" target="_blank" class="inline-flex items-center text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-map-location-dot mr-1.5 text-[#3a5a40]"></i> 阿美橫丁地圖</a>
                     </div>
                 </div>
             </div>
 
             <!-- Day 6 -->
-            <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
-                    <div class="flex items-center space-x-3">
-                        <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded-lg text-sm">Day 6</span>
-                        <h3 class="text-lg font-bold text-gray-800">7/11 (六) 箱根經典一日遊</h3>
-                    </div>
+            <div class="bg-white rounded-xl shadow-sm p-5 border border-gray-100">
+                <div class="bg-earth-tag px-4 py-2.5 rounded-lg mb-4 font-bold text-sm">
+                    Day 6 (7/11)：箱根經典一日遊
                 </div>
-                <div class="relative pl-6 space-y-6 timeline-line">
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">07:30 - 09:53</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            從上野出發至新宿購買箱根周遊券，搭乘 08:11「小田急浪漫特快」直達箱根湯本站。 <a href="https://maps.google.com/?q=Hakone-Yumoto+Station" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a>
-                        </div>
+                <div class="relative pl-6 space-y-4 timeline-line text-sm text-gray-700">
+                    <div class="relative pl-4">
+                        <div class="absolute left-[-17px] top-1.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-medium text-gray-900">什麼站到什麼站</div>
+                        <div class="text-xs text-gray-500">上野站 ➔ 新宿站 ➔ 箱根湯本站（浪漫特快）</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">黃金路線</div>
-                        <div class="flex-1 text-sm text-gray-700 space-y-1">
-                            <p>• 箱根登山鐵道 ➔ 登山纜車 ➔ 空中纜車（眺望富士山） ➔ 海賊觀光船遊蘆之湖。</p>
-                            <p>• 箱根神社（水上鳥居）、大涌谷吃黑雞蛋。 <a href="https://maps.google.com/?q=Hakone+Shrine" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></p>
-                        </div>
+                    <div class="bg-train-box p-3.5 rounded-lg text-xs sm:text-sm space-y-1">
+                        <div class="font-bold text-[#3a5a40]"><i class="fa-solid fa-train-subway mr-1"></i> 建議交通與金額</div>
+                        <div>購買「箱根周遊券（2日券）」成人約 6,500 日圓；加購浪漫特快特急券單程約 1,110 日圓。</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">晚上</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            搭乘箱根登山巴士返回箱根湯本，轉乘特快或新幹線返回東京上野享用晚餐。
-                        </div>
+                    <div class="relative pl-4 pt-1">
+                        <div class="absolute left-[-17px] top-2.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-bold text-gray-800 mb-1">詳細內容解說</div>
+                        <p class="text-gray-600 mb-2">搭乘 08:11 小田急浪漫特快直達箱根湯本。體驗箱根登山鐵道、纜車、空中纜車、蘆之湖海賊觀光船，參拜箱根神社水上鳥居並在大涌谷吃黑雞蛋，傍晚返回上野。</p>
+                        <a href="https://maps.google.com/?q=Hakone+Shrine" target="_blank" class="inline-flex items-center text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-map-location-dot mr-1.5 text-[#3a5a40]"></i> 箱根神社地圖</a>
                     </div>
                 </div>
             </div>
 
             <!-- Day 7 -->
-            <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
-                    <div class="flex items-center space-x-3">
-                        <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded-lg text-sm">Day 7</span>
-                        <h3 class="text-lg font-bold text-gray-800">7/12 (日) 橫濱港都浪漫一日遊</h3>
-                    </div>
+            <div class="bg-white rounded-xl shadow-sm p-5 border border-gray-100">
+                <div class="bg-earth-tag px-4 py-2.5 rounded-lg mb-4 font-bold text-sm">
+                    Day 7 (7/12)：橫濱港都浪漫一日遊
                 </div>
-                <div class="relative pl-6 space-y-6 timeline-line">
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">交通</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            從上野搭乘 JR 上野東京線（東海道線直通），免換車約 40 分鐘直達橫濱。
-                        </div>
+                <div class="relative pl-6 space-y-4 timeline-line text-sm text-gray-700">
+                    <div class="relative pl-4">
+                        <div class="absolute left-[-17px] top-1.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-medium text-gray-900">什麼站到什麼站</div>
+                        <div class="text-xs text-gray-500">上野站 ➔ 橫濱站（JR 上野東京線直通）</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">景點推薦</div>
-                        <div class="flex-1 text-sm text-gray-700 space-y-1">
-                            <p>• <strong>港未來 21 區</strong>：紅磚倉庫、Cosmo World 大觀覽車。 <a href="https://maps.google.com/?q=Minato+Mirai+Yokohama" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></p>
-                            <p>• <strong>橫濱中華街</strong>：品嚐小籠包與異國風情。 <a href="https://maps.google.com/?q=Yokohama+Chinatown" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></p>
-                            <p>• <strong>山下公園 / 冰川丸</strong>：漫步海濱看海港風光。</p>
-                        </div>
+                    <div class="bg-train-box p-3.5 rounded-lg text-xs sm:text-sm space-y-1">
+                        <div class="font-bold text-[#3a5a40]"><i class="fa-solid fa-train-subway mr-1"></i> 建議交通與金額</div>
+                        <div>搭乘 JR 上野東京線（東海道線直通），免換車約 40 分鐘直達。車資約 570 日圓。</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">晚上</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            欣賞橫濱港未來世界級璀璨夜景後返回上野。
+                    <div class="relative pl-4 pt-1">
+                        <div class="absolute left-[-17px] top-2.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-bold text-gray-800 mb-1">詳細內容解說</div>
+                        <p class="text-gray-600 mb-2">造訪港未來 21 區（紅磚倉庫、大觀覽車）、橫濱中華街品嚐小籠包，漫步山下公園與冰川丸，欣賞世界級璀璨夜景後返回上野。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://maps.google.com/?q=Minato+Mirai+Yokohama" target="_blank" class="inline-flex items-center text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-map-location-dot mr-1.5 text-[#3a5a40]"></i> 港未來地圖</a>
+                            <a href="https://maps.google.com/?q=Yokohama+Chinatown" target="_blank" class="inline-flex items-center text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-map-location-dot mr-1.5 text-[#3a5a40]"></i> 中華街地圖</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Day 8 -->
-            <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
-                    <div class="flex items-center space-x-3">
-                        <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded-lg text-sm">Day 8</span>
-                        <h3 class="text-lg font-bold text-gray-800">7/13 (一) 秋葉原動漫電器一日遊</h3>
-                    </div>
+            <div class="bg-white rounded-xl shadow-sm p-5 border border-gray-100">
+                <div class="bg-earth-tag px-4 py-2.5 rounded-lg mb-4 font-bold text-sm">
+                    Day 8 (7/13)：秋葉原動漫電器一日遊
                 </div>
-                <div class="relative pl-6 space-y-6 timeline-line">
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">交通</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            上野出發搭乘 JR 山手線或京濱東北線 2 分鐘即達秋葉原。
-                        </div>
+                <div class="relative pl-6 space-y-4 timeline-line text-sm text-gray-700">
+                    <div class="relative pl-4">
+                        <div class="absolute left-[-17px] top-1.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-medium text-gray-900">什麼站到什麼站</div>
+                        <div class="text-xs text-gray-500">上野站 ➔ 秋葉原站（JR 山手線 / 京濱東北線）</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">全天行程</div>
-                        <div class="flex-1 text-sm text-gray-700 space-y-1">
-                            <p>• 逛友都八喜 Yodobashi、Radio 會館、Super Potato 懷舊電玩。 <a href="https://maps.google.com/?q=Akihabara+Tokyo" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></p>
-                            <p>• 體驗特色女僕咖啡廳或動漫聯名主題餐廳。</p>
-                        </div>
+                    <div class="bg-train-box p-3.5 rounded-lg text-xs sm:text-sm space-y-1">
+                        <div class="font-bold text-[#3a5a40]"><i class="fa-solid fa-train-subway mr-1"></i> 建議交通與金額</div>
+                        <div>搭乘 JR 山手線只要 2 分鐘（車資約 150 日圓），甚至步行即可抵達。</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">晚上</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            返回上野唐吉訶德採買最後的藥妝與伴手禮。
-                        </div>
+                    <div class="relative pl-4 pt-1">
+                        <div class="absolute left-[-17px] top-2.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-bold text-gray-800 mb-1">詳細內容解說</div>
+                        <p class="text-gray-600 mb-2">逛各大動漫、模型、電玩與 3C 百貨（如友都八喜、Radio 會館、Super Potato 懷舊電玩），體驗特色主題餐廳，晚上回上野唐吉訶德採買伴手禮。</p>
+                        <a href="https://maps.google.com/?q=Akihabara+Tokyo" target="_blank" class="inline-flex items-center text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-map-location-dot mr-1.5 text-[#3a5a40]"></i> 秋葉原地圖</a>
                     </div>
                 </div>
             </div>
 
             <!-- Day 9 -->
-            <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
-                    <div class="flex items-center space-x-3">
-                        <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded-lg text-sm">Day 9</span>
-                        <h3 class="text-lg font-bold text-gray-800">7/14 (二) 東京市區悠閒漫步與血拼</h3>
-                    </div>
+            <div class="bg-white rounded-xl shadow-sm p-5 border border-gray-100">
+                <div class="bg-earth-tag px-4 py-2.5 rounded-lg mb-4 font-bold text-sm">
+                    Day 9 (7/14)：東京市區悠閒漫步與血拼
                 </div>
-                <div class="relative pl-6 space-y-6 timeline-line">
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">上午 / 下午</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            自由安排東京市區行程，可前往淺草寺雷門參拜、晴空塔登高，或到銀座、新宿享受購物時光。 <a href="https://maps.google.com/?q=Senso-ji+Asakusa" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a>
-                        </div>
+                <div class="relative pl-6 space-y-4 timeline-line text-sm text-gray-700">
+                    <div class="relative pl-4">
+                        <div class="absolute left-[-17px] top-1.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-medium text-gray-900">什麼站到什麼站</div>
+                        <div class="text-xs text-gray-500">上野站 ➔ 淺草站 / 銀座 / 新宿（東京地下鐵各線）</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">晚上</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            與同行親友享用豐富的東京告別晚餐（如文字燒或精緻日料）。
-                        </div>
+                    <div class="bg-train-box p-3.5 rounded-lg text-xs sm:text-sm space-y-1">
+                        <div class="font-bold text-[#3a5a40]"><i class="fa-solid fa-train-subway mr-1"></i> 建議交通與金額</div>
+                        <div>可使用「東京地鐵 24/48/72 小時券」或 IC 卡自由移動。</div>
+                    </div>
+                    <div class="relative pl-4 pt-1">
+                        <div class="absolute left-[-17px] top-2.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-bold text-gray-800 mb-1">詳細內容解說</div>
+                        <p class="text-gray-600 mb-2">自由安排東京市區行程，前往淺草寺雷門參拜、晴空塔登高，或到銀座、新宿享受最後購物時光。晚上享用豐富的東京告別晚餐。</p>
+                        <a href="https://maps.google.com/?q=Senso-ji+Asakusa" target="_blank" class="inline-flex items-center text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-map-location-dot mr-1.5 text-[#3a5a40]"></i> 淺草寺地圖</a>
                     </div>
                 </div>
             </div>
 
             <!-- Day 10 -->
-            <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
-                    <div class="flex items-center space-x-3">
-                        <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded-lg text-sm">Day 10</span>
-                        <h3 class="text-lg font-bold text-gray-800">7/15 (三) 上野採買 ➔ 成田機場 ✈️ 台北</h3>
-                    </div>
+            <div class="bg-white rounded-xl shadow-sm p-5 border border-gray-100">
+                <div class="bg-earth-tag px-4 py-2.5 rounded-lg mb-4 font-bold text-sm">
+                    Day 10 (7/15)：上野採買 ➔ 成田機場 ✈️ 台北
                 </div>
-                <div class="relative pl-6 space-y-6 timeline-line">
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">上午</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            前往上野恩賜公園散步，或是補齊最後的伴手禮。 <a href="https://maps.google.com/?q=Ueno+Park" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a>
-                        </div>
+                <div class="relative pl-6 space-y-4 timeline-line text-sm text-gray-700">
+                    <div class="relative pl-4">
+                        <div class="absolute left-[-17px] top-1.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-medium text-gray-900">什麼站到什麼站</div>
+                        <div class="text-xs text-gray-500">京成上野站 ➔ 成田機場（京成電鐵 Skyliner）</div>
                     </div>
-                    <div class="relative flex items-start space-x-4">
-                        <div class="absolute -left-6 w-3 h-3 bg-nature-600 rounded-full ring-4 ring-white mt-1.5"></div>
-                        <div class="w-20 text-xs font-bold text-nature-700 shrink-0 pt-0.5">下午</div>
-                        <div class="flex-1 text-sm text-gray-700">
-                            從上野站搭乘京成電鐵 Skyliner，只要 41 分鐘直達成田機場，搭乘下午班機愉快返回台北。 <a href="https://maps.google.com/?q=Narita+Airport" target="_blank" class="text-xs text-nature-600 font-medium ml-1 hover:underline"><i class="fa-solid fa-map-location-dot"></i> 地圖</a>
-                        </div>
+                    <div class="bg-train-box p-3.5 rounded-lg text-xs sm:text-sm space-y-1">
+                        <div class="font-bold text-[#3a5a40]"><i class="fa-solid fa-train-subway mr-1"></i> 建議交通與金額</div>
+                        <div>搭乘京成電鐵 Skyliner，只要 41 分鐘直達成田機場。車資約 2,570 日圓。</div>
+                    </div>
+                    <div class="relative pl-4 pt-1">
+                        <div class="absolute left-[-17px] top-2.5 w-2.5 h-2.5 bg-[#588157] rounded-full ring-2 ring-white"></div>
+                        <div class="font-bold text-gray-800 mb-1">詳細內容解說</div>
+                        <p class="text-gray-600 mb-2">上午至上野恩賜公園散步或補齊伴手禮，下午搭乘 Skyliner 直達成田機場，搭乘下午班機愉快返回台北。</p>
+                        <a href="https://maps.google.com/?q=Narita+Airport" target="_blank" class="inline-flex items-center text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-map-location-dot mr-1.5 text-[#3a5a40]"></i> 成田機場地圖</a>
                     </div>
                 </div>
             </div>
@@ -385,7 +322,7 @@
     </main>
 
     <!-- 底部 Footer -->
-    <footer class="bg-nature-800 text-nature-100 text-center py-6 mt-12 text-sm">
+    <footer class="bg-[#3a5a40] text-[#eef2ec] text-center py-6 mt-12 text-xs">
         <p>2027 Nagoya & Tokyo 10-Day Travel Itinerary. Have a nice trip! ✈️</p>
     </footer>
 
