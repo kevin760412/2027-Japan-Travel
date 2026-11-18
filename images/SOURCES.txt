@@ -1,0 +1,226 @@
+Downloaded travel photos from Openverse; source creator and CC license are recorded below.
+Existing day01-1.png through day01-4.png were already in the folder and are not listed here.
+
+day02-1.png
+  Source page: https://commons.wikimedia.org/wiki/File:Nagoya_Castle(Larger).jpg
+  Title: Nagoya Castle (Larger)
+  Creator: Base64
+  License: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
+  Description: Nagoya Castle keep
+
+day02-2.png
+  Source page: https://www.flickr.com/photos/47626742@N07/1885316464
+  Title: Atsuta Shrine (Nagoya, Japan)
+  Creator: ~MVI~ (warped)
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: Atsuta Shrine (Nagoya, Japan)
+
+day02-3.png
+  Source page: https://www.flickr.com/photos/72859063@N00/17711518761
+  Title: Japanese cuisine, Hitsumabushi; ひつまぶし
+  Creator: Nullumayulife
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day02-4.png
+  Source page: https://www.flickr.com/photos/12119805@N08/2380326388
+  Title: OASIS 21 & Nagoya TV Tower
+  Creator: keyaki
+  License: CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/)
+  Description: 
+
+day03-1.png
+  Source page: https://www.flickr.com/photos/135459711@N05/27844725890
+  Title: Coffee sign
+  Creator: t.kunikuni
+  License: CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/)
+  Description: 
+
+day03-2.png
+  Source page: https://www.flickr.com/photos/42102924@N02/14356065112
+  Title: Eyeballs on Sakae 栄, Public Clock 時計, Nagoya 名古屋市 Hisaya-odori Park, Nagoya Japan
+  Creator: Arjan Richter
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day04-2.png
+  Source page: https://www.flickr.com/photos/15622795@N05/3059670681
+  Title: Light tunnel at Nabana no Sato
+  Creator: emrank
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day05-1.png
+  Source page: https://www.flickr.com/photos/92203585@N00/1381232694
+  Title: Nagoya 'morning set' デラックスモーニング
+  Creator: jetalone
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day05-2.png
+  Source page: https://www.flickr.com/photos/77742560@N06/49495047828
+  Title: Decal on the side of the N700 type of Shinkansen train
+  Creator: shankar s.
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day05-3.png
+  Source page: https://www.flickr.com/photos/42102924@N02/3883630487
+  Title: SEIKO セイコー Clock 時計, Ameyoko Market in Ueno Tokyo Japan
+  Creator: Arjan Richter
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day06-2.png
+  Source page: https://www.flickr.com/photos/22539273@N00/13776878594
+  Title: Torii on Lake Ashi @ Hakone Shrine
+  Creator: *_*
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day06-3.png
+  Source page: https://www.flickr.com/photos/98901717@N08/34183986226
+  Title: Lake Ashi Pirate Ship
+  Creator: lnevay
+  License: CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/)
+  Description: 
+
+day06-4.png
+  Source page: https://www.flickr.com/photos/21733281@N00/9335588037
+  Title: Hakone-Yumoto station & Hayakawa river
+  Creator: june29
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day06-5.png
+  Source page: https://commons.wikimedia.org/wiki/File:Hakone_Tozan_Railway_2013-02-10.jpg
+  Title: Hakone Tozan Railway 2013-02-10
+  Creator: Kentaro Ohno
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 箱根登山鐵道列車
+
+day06-6.png
+  Source page: https://commons.wikimedia.org/wiki/File:Hakone_cablecar_1.jpg
+  Title: Hakone cablecar 1
+  Creator: Los688
+  License: Public domain
+  Description: 箱根登山纜車
+
+day06-7.png
+  Source page: https://commons.wikimedia.org/wiki/File:A_view_of_Mount_Fuji,_Hakone_ropeway_(15542758903).jpg
+  Title: A view of Mount Fuji, Hakone ropeway
+  Creator: x768
+  License: CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/)
+  Description: 箱根空中纜車與富士山景色
+
+day06-8.png
+  Source page: https://commons.wikimedia.org/wiki/File:Owakudani_BlackEggs_Large.JPG
+  Title: Owakudani BlackEggs Large
+  Creator: Jpatokal
+  License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+  Description: 大涌谷黑雞蛋
+
+day07-2.png
+  Source page: https://www.flickr.com/photos/16877319@N07/2786232751
+  Title: Yokohama Minato Mirai (Night)
+  Creator: Guwashi999
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day07-3.png
+  Source page: https://www.flickr.com/photos/39952962@N00/13305239405
+  Title: Yokohama Chinatown
+  Creator: decade_null
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day08-1.png
+  Source page: https://www.flickr.com/photos/98115025@N00/108578113
+  Title: Akihabara Electric Town, Tokyo
+  Creator: stevecadman
+  License: CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/)
+  Description: 
+
+day08-2.png
+  Source page: https://www.flickr.com/photos/82365211@N00/9241535712
+  Title: 4K TV demo at Yodobashi Akiba
+  Creator: kalleboo
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day09-1.png
+  Source page: https://www.flickr.com/photos/91049143@N00/13757029184
+  Title: 雷門, 風雷神門, 淺草寺, 金龍山淺草寺, 淺草, 東京, 日本, かみなりもん, ふうらいじんもん, 浅草寺, 金龍山浅草寺, せんそうじ, あさくさ, Kaminarimon, Thunder Gate, Senso-ji, Kinryu-zan Senso-ji, Asakusa, Tokyo, Japan
+  Creator: bryan...
+  License: CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/)
+  Description: 
+
+day09-2.png
+  Source page: https://www.flickr.com/photos/31813761@N02/35156386642
+  Title: 晴空塔@東京(TOKYO SKYTREE, Japan)
+  Creator: digi0712
+  License: CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/)
+  Description: 
+
+day10-1.png
+  Source page: https://www.flickr.com/photos/47626742@N07/6404325303
+  Title: Autumn Leaf Color in Garden (Ueno Park, Tokyo, Japan)
+  Creator: t-mizo
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day10-2.png
+  Source page: https://www.flickr.com/photos/85711459@N00/302650409
+  Title: Narita International Airport, Japan
+  Creator: Joe Gatling
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description:
+
+day04-1.png
+  Source page: https://www.flickr.com/photos/15622795@N05/3509670282
+  Title: Nagashima Jazz Dream Outlets
+  Creator: emrank
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day06-1.png
+  Source page: https://www.flickr.com/photos/47626742@N07/7714096982
+  Title: MSE-60000 (Hakoneyumoto, Kanagawa, Japan)
+  Creator: t-mizo
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day07-1.png
+  Source page: https://www.flickr.com/photos/88664052@N00/2625221249
+  Title: tokyu/minato mirai lines sign
+  Creator: Molly Des Jardin
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: 
+
+day01-5.png
+  Source page: https://www.flickr.com/photos/25368895@N00/5968675
+  Title: Famous Nagoyan restaurant 'Sekai no Yamachan'
+  Creator: ayustety
+  License: CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/)
+  Description: Sekai no Yamachan restaurant entrance/sign
+
+day01-6.png
+  Source page: https://www.flickr.com/photos/22598122@N03/3459030869
+  Title: Tebasaki Fried chicken wing Huuraibou at Nagotya city
+  Creator: kimishowota
+  License: CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/)
+  Description: Nagoya-style fried chicken wings
+
+day04-2.png
+  Source page: https://www.flickr.com/photos/15622795@N05/3059673593
+  Title: Light tunnel at Nabana no Sato
+  Creator: emrank
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: Illuminated tunnel at Nabana no Sato
+
+day05-4.png
+  Source page: https://www.flickr.com/photos/27117620@N06/8360201180
+  Title: Komeda Coffee
+  Creator: Ray Larabie
+  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
+  Description: Komeda Coffee storefront sign
